@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Clinic Intake - Oren</title>
+    <meta name="description" content="Request a demo for Oren's AI-powered clinic management solution">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.png">
+
+    <!-- Fonts from main site -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin">
+
+    <style>
+        /* Import fonts matching the main site */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 80px 24px 40px;
+            flex: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .logo {
+            font-family: 'Instrument Serif', serif;
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .form-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        label .required {
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            color: #ffffff;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.2s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='white' stroke-opacity='0.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+
+        select option {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px 32px;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            border-radius: 154px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow:
+                0.5652735987142659px 0.5652735987142659px 1.7587186974569549px -0.41666666666666663px rgba(0, 0, 0, 0.18),
+                1.4452495242585428px 1.4452495242585428px 4.496561252083328px -0.8333333333333333px rgba(0, 0, 0, 0.18),
+                2.8974073717254214px 2.8974073717254214px 9.014616161790524px -1.25px rgba(0, 0, 0, 0.18),
+                5.492479927784297px 5.492479927784297px 17.08858713085601px -1.6666666666666665px rgba(0, 0, 0, 0.18),
+                10.917409129219594px 10.917409129219594px 33.96700572434002px -2.0833333333333335px rgba(0, 0, 0, 0.18),
+                24px 24px 74.67047609329941px -2.5px rgba(0, 0, 0, 0.18),
+                inset 0px -16px 48px 0px rgb(0, 0, 0);
+            margin-top: 8px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0.5652735987142659px 0.5652735987142659px 1.7587186974569549px -0.41666666666666663px rgba(0, 0, 0, 0.25),
+                1.4452495242585428px 1.4452495242585428px 4.496561252083328px -0.8333333333333333px rgba(0, 0, 0, 0.25),
+                2.8974073717254214px 2.8974073717254214px 9.014616161790524px -1.25px rgba(0, 0, 0, 0.25),
+                5.492479927784297px 5.492479927784297px 17.08858713085601px -1.6666666666666665px rgba(0, 0, 0, 0.25),
+                10.917409129219594px 10.917409129219594px 33.96700572434002px -2.0833333333333335px rgba(0, 0, 0, 0.25),
+                28px 28px 80px -2.5px rgba(0, 0, 0, 0.25),
+                inset 0px -16px 48px 0px rgb(0, 0, 0);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .privacy-text {
+            margin-top: 24px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .privacy-text a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+
+        .privacy-text a:hover {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 32px;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-message h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .success-message p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 60px 20px 32px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .form-card {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="./" class="back-link">Back to home</a>
+
+        <div class="header">
+            <div class="logo">Oren</div>
+            <h1>Request a Demo</h1>
+            <p>Tell us about your clinic and we'll show you how Oren can transform your operations</p>
+        </div>
+
+        <div class="form-card">
+            <form id="clinicForm">
+                <div class="form-group">
+                    <label for="clinicName">Clinic Name <span class="required">*</span></label>
+                    <input type="text" id="clinicName" name="clinicName" placeholder="Enter your clinic name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Contact Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Website URL</label>
+                    <input type="url" id="website" name="website" placeholder="https://yourclinic.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="clinicType">Clinic Type <span class="required">*</span></label>
+                    <select id="clinicType" name="clinicType" required>
+                        <option value="">Select clinic type</option>
+                        <option value="general">General</option>
+                        <option value="dental">Dental</option>
+                        <option value="aesthetic">Aesthetic</option>
+                        <option value="specialty">Specialty</option>
+                        <option value="multi-clinic">Multi-clinic</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="callVolume">Average number of calls per month <span class="required">*</span></label>
+                    <input type="number" id="callVolume" name="callVolume" placeholder="e.g., 500" min="0" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Clinic Details</button>
+
+                <div class="privacy-text">
+                    By submitting this form, you agree to our privacy policy.<br>
+                    We'll never share your information with third parties.
+                </div>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <h2>✓ Thank You!</h2>
+                <p>We've received your information and will be in touch within 24 hours to schedule your personalized
+                    demo.</p>
+                <a href="./" class="submit-btn"
+                    style="display: inline-block; text-decoration: none; width: auto; padding: 16px 48px;">Return to
+                    Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('clinicForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = {
+                clinicName: document.getElementById('clinicName').value,
+                email: document.getElementById('email').value,
+                website: document.getElementById('website').value,
+                clinicType: document.getElementById('clinicType').value,
+                callVolume: document.getElementById('callVolume').value,
+                timestamp: new Date().toISOString()
+            };
+
+            // Log to console (in production, this would send to your backend)
+            console.log('Clinic Intake Submission:', formData);
+
+            // Show success message
+            document.querySelector('form').style.display = 'none';
+            document.getElementById('successMessage').classList.add('show');
+
+            // In production, you would send this to your backend:
+            // fetch('/api/clinic-intake', {
+            //   method: 'POST',
+            //   headers: { 'Content-Type': 'application/json' },
+            //   body: JSON.stringify(formData)
+            // });
+        });
+    </script>
+</body>
+
+</html>
